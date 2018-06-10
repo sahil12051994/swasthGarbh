@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">स्वस्थ कोख</string>
+    <string name="who_guidelines">WHO दिशानिर्देश</string>
+    <string name="weekely_development">सप्ताह विकास</string>
+    <string name="change_doctor">डॉक्टर बदलो</string>
+    <string name="history">इतिहास</string>
+    <string name="share_reports">रिपोर्ट साझा करें</string>
+    <string name="contact_us">हमसे संपर्क करें</string>
+    <string name="about_us">हमारे बारे में</string>
+    <string name="communicate">संबंध रखना</string>
+    <string name="patient_settings">सेटिंग</string>
+
+    <string name="doctor_panel_patients">मरीज</string>
+    <string name="doctor_notifications">अधिसूचना</string>
+    <string name="doctor_panel_automated_analysis">विश्लेषण</string>
+    <string name="doctor_nav_contact_other_doctor">अन्य डॉक्टर</string>
+    <string name="login_as">लॉगिन करें</string>
+    <string name="developed_by_iit_roorkee">IIT Roorkee द्वारा विकसित</string>
+    <string name="doctor">चिकित्सक</string>
+    <string name="patient">मरीज</string>
+</resources>

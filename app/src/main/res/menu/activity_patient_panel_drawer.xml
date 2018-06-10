@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/patient_who_guidelines"
+            android:icon="@drawable/heart_ecg"
+            android:title="@string/who_guidelines" />
+        <item
+            android:id="@+id/patient_weekely_dev"
+            android:icon="@drawable/preg_baby"
+            android:title="@string/weekely_development" />
+        <item
+            android:id="@+id/patient_change_doctor"
+            android:icon="@drawable/stethoscope"
+            android:title="@string/change_doctor" />
+        <item
+            android:id="@+id/patient_history"
+            android:icon="@drawable/history"
+            android:title="@string/history" />
+    </group>
+
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/patient_share_report"
+                android:icon="@drawable/share"
+                android:title="@string/share_reports" />
+            <item
+                android:id="@+id/patient_contact_us"
+                android:icon="@drawable/gmail"
+                android:title="@string/contact_us" />
+            <item
+                android:id="@+id/patient_about_us"
+                android:icon="@drawable/about"
+                android:title="@string/about_us" />
+        </menu>
+    </item>
+
+</menu>

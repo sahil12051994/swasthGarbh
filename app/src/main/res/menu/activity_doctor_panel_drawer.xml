@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/doctor_nav_patients"
+            android:icon="@drawable/preg_baby"
+            android:title="@string/doctor_panel_patients" />
+        <item
+            android:id="@+id/doctor_nav_notif"
+            android:icon="@drawable/notification"
+            android:title="@string/doctor_notifications" />
+        <item
+            android:id="@+id/doctor_nav_who"
+            android:icon="@drawable/heart_ecg"
+            android:title="@string/who_guidelines" />
+        <item
+            android:id="@+id/doctor_nav_analysis"
+            android:icon="@drawable/analysis"
+            android:title="@string/doctor_panel_automated_analysis" />
+    </group>
+
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/doctor"
+                android:title="@string/doctor_nav_contact_other_doctor" />
+        </menu>
+    </item>
+
+</menu>
