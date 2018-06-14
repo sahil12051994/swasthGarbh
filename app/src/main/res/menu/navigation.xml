@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:enabled="true"
+        android:id="@+id/bottomNavMedicine"
+        android:icon="@drawable/pills"
+        android:title="@string/bottomNavMedicine" />
+
+    <item
+        android:enabled="true"
+        android:id="@+id/bottomNavWhoGuidelines"
+        android:icon="@drawable/doctor"
+        android:title="@string/bottomNavWho" />
+
+    <item
+        android:enabled="true"
+        android:id="@+id/bottomLocations"
+        android:icon="@drawable/maplocation"
+        android:title="@string/bottomNavLocations" />
+
+</menu>

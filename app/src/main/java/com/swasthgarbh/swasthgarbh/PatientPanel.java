@@ -1,5 +1,6 @@
 package com.swasthgarbh.swasthgarbh;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -133,10 +134,17 @@ public class PatientPanel extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-//        int id = item.getItemId();
+        int id = item.getItemId();
 
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
+        if (id == R.id.patient_history) {
+            // Handle patient history action
+            Intent intent = new Intent(PatientPanel.this, PatientHistory.class);
+            startActivity(intent);
+        } else if (id == R.id.patient_who_guidelines){
+            // Handle the who action
+            Intent intent = new Intent(PatientPanel.this, whoTabbedMedicine.class);
+            startActivity(intent);
+        }
 //        } else if (id == R.id.nav_gallery) {
 //
 //        } else if (id == R.id.nav_slideshow) {

@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity
             android:name=".PatientPanel"
             android:label="@string/title_activity_patient_panel" />
@@ -26,7 +26,10 @@
         <activity
             android:name=".PatientHistory"
             android:label="@string/title_activity_patient_history"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".whoTabbedMedicine"
+            android:label="@string/title_activity_who_tabbed_medicine"></activity>
     </application>
 
 </manifest>

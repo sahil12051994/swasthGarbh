@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".whoTabbedMedicine">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Button
+                android:id="@+id/languageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:text="Language"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lmpeddTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="LMP    |     EDD"
+                android:textColor="#EF9A9A"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEdit"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toEndOf="@+id/languageButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lmpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="1 Jun'18"
+                app:layout_constraintStart_toEndOf="@+id/languageButton"
+                app:layout_constraintTop_toBottomOf="@+id/lmpeddTextView" />
+
+            <TextView
+                android:id="@+id/edddate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="8dp"
+                android:text="30 mar'18"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEdit"
+                app:layout_constraintTop_toBottomOf="@+id/lmpeddTextView" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lmpdate" />
+        </android.support.constraint.ConstraintLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/navigation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/tweleveweektextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="12 weeks (24 aug 2018)"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#EF9A9A">
+
+                    <ImageView
+                        android:id="@+id/image1inblock1"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/blood" />
+
+                    <TextView
+                        android:id="@+id/heading1inblock1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="ANC1"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image1inblock1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text1inblock1"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="Diabetes"
+                        android:textColorLink="#638a16"
+                        app:layout_constraintStart_toEndOf="@+id/heading1inblock1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text2inblock1"
+                        android:layout_width="90dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="12dp"
+                        android:text="Anaemia"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/heading1inblock1"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text3inblock1"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:text="HIV"
+                        app:layout_constraintStart_toEndOf="@+id/text1inblock1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text4inblock1"
+                        android:layout_width="106dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:text="Ultrasound"
+                        android:textColorLink="@android:color/holo_green_dark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text2inblock1"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text5inblock5"
+                        android:layout_width="84dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:text="Tetanus"
+                        app:layout_constraintStart_toEndOf="@+id/text3inblock1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text6inblock1"
+                        android:layout_width="107dp"
+                        android:layout_height="wrap_content"
+                        android:text="Urine Test"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text4inblock1"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView5"
+                        app:srcCompat="@drawable/injection" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/urine" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/twent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="20 Weeks (19 Oct,2018)"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#EF9A9A">
+
+                    <TextView
+                        android:id="@+id/heading1inblock2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="ANC2"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image1inblock2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/image1inblock2"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/blood" />
+
+                    <CheckBox
+                        android:id="@+id/text1inblock2"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Diabetes"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/heading1inblock2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text2inblock2"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Ultrasound"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text1inblock2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/twentysixweektextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="26 Weeks (30 Nov,2018)"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#EF9A9A">
+
+                    <TextView
+                        android:id="@+id/heading1inblock3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="ANC3"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image1inblock3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.52" />
+
+                    <ImageView
+                        android:id="@+id/image1inblock3"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/blood" />
+
+                    <CheckBox
+                        android:id="@+id/text1inblock3"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Diabetes"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text3inblock3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text2inblock3"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Anaemia"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/heading1inblock3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text3inblock3"
+                        android:layout_width="106dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Urine Test"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text2inblock3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/urine" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/thirtyweektextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="30 weeks (28 dec, 2018)"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#EF9A9A">
+
+                    <TextView
+                        android:id="@+id/heading1inblock4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="ANC4"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image1inblock4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/image1inblock4"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/blood" />
+
+                    <CheckBox
+                        android:id="@+id/text1inblock4"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/diabetes"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/heading1inblock4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        android:textColor="#ffffff"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/thirtyfourweektextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="34 weeks (25 Jan, 2019)"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#EF9A9A">
+
+                    <CheckBox
+                        android:id="@+id/twentyweektextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Urine Test"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/heading1inblock5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <TextView
+                        android:id="@+id/heading1inblock5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="ANC5"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image1inblock5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/image1inblock5"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/blood" />
+
+                    <CheckBox
+                        android:id="@+id/text1inblock5"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Diabetes"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/twentyweektextview"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/urine" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/thirtysixweektextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="36 weeks (8 feb, 2019)"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#EF9A9A">
+
+                    <TextView
+                        android:id="@+id/heading1inblock6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="ANC6"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image1inblock6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/image1inblock6"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/blood" />
+
+                    <CheckBox
+                        android:id="@+id/text1inblock6"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Diabetes"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/heading1inblock6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <CheckBox
+                        android:id="@+id/text2inblock6"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Anaemia"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text1inblock6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/thirtyeightweektextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="38 weeks (22 feb, 2019)"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#EF9A9A">
+
+                    <TextView
+                        android:id="@+id/heading1inblock7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="ANC7"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image4inblock4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/image4inblock4"
+                        android:layout_width="31dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/blood" />
+
+                    <CheckBox
+                        android:id="@+id/text1inblock7"
+                        android:layout_width="103dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Diabetes"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/heading1inblock7"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/fourtyweektextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="40 weeks (8 March, 2019)"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#EF9A9A">
+
+                    <TextView
+                        android:id="@+id/heading1inblock8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="ANC8"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image1inblock8"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/image1inblock8"
+                        android:layout_width="41dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/blood" />
+
+                    <CheckBox
+                        android:id="@+id/text1inblock8"
+                        android:layout_width="101dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Diabetes"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/heading1inblock8"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"/>
+
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>android>
+    <!--<FrameLayout-->
+        <!--android:id="@+id/fragmentInWhoGuidelines"-->
+        <!--android:name="com.swasthgarbh.swasthgarbh.WhoGuidelinesFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+
+</android.support.constraint.ConstraintLayout>
